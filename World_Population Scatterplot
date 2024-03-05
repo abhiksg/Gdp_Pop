@@ -1,0 +1,60 @@
+# Import package
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Scatterplot Customization_ I
+print(gdp_cap[-1])
+print(life_exp[-1])
+plt.scatter(gdp_cap, life_exp)
+plt.xscale('log') 
+
+# Scatterplot Customization_ II
+xlab = 'GDP per Capita [in USD]'
+ylab = 'Life Expectancy [in years]'
+title = 'World Development in 2007'
+plt.xlabel('GDP per Capita [in USD]')
+plt.ylabel('Life Expectancy [in years]')
+plt.title('World Development in 2007')
+plt.show()
+
+# Scatterplot Customization_ III
+plt.scatter(gdp_cap, life_exp)
+plt.xscale('log') 
+plt.xlabel('GDP per Capita [in USD]')
+plt.ylabel('Life Expectancy [in years]')
+plt.title('World Development in 2007')
+tick_val = [1000, 10000, 100000]
+tick_lab = ['1k', '10k', '100k']
+plt.xticks([1000, 10000, 100000],
+['1k', '10k', '100k'])
+plt.show()
+
+#Scatterplot Customization_ IV
+plt.scatter(gdp_cap, life_exp, s = np_pop)
+plt.xscale('log') 
+plt.xlabel('GDP per Capita [in USD]')
+plt.ylabel('Life Expectancy [in years]')
+plt.title('World Development in 2007')
+plt.xticks([1000, 10000, 100000],['1k', '10k', '100k'])
+np_pop=np.array(pop)
+np_pop= np_pop*2
+plt.scatter(x = gdp_cap, y = life_exp, s = np.array(pop) * 2, c=col, alpha=0.8)
+plt.show()
+plt.xscale('log') 
+plt.xlabel('GDP per Capita [in USD]')
+plt.ylabel('Life Expectancy [in years]')
+plt.title('World Development in 2007')
+plt.xticks([1000,10000,100000], ['1k','10k','100k'])
+plt.show()
+
+#Scatterplot Customization_ Final
+plt.scatter(x = gdp_cap, y = life_exp, s = np.array(pop) * 2, c = col, alpha = 0.8)
+plt.xscale('log') 
+plt.xlabel('GDP per Capita [in USD]')
+plt.ylabel('Life Expectancy [in years]')
+plt.title('World Development in 2007')
+plt.xticks([1000,10000,100000], ['1k','10k','100k'])
+plt.text(1550, 71, 'India')
+plt.text(5700, 80, 'China')
+plt.grid(True)
+plt.show()
